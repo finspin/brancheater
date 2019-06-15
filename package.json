@@ -1,0 +1,50 @@
+{
+  "name": "brancheater",
+  "version": "1.0.0",
+  "description": "A GitHub bot that deletes branches of closed pull requests.",
+  "author": "Jaroslav Spisak <jarospisak@gmail.com>",
+  "license": "ISC",
+  "repository": "https://github.com/finspin/brancheater",
+  "homepage": "https://github.com/finspin/brancheater",
+  "bugs": "https://github.com/finspin/brancheater/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "probot": "7.5.1"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "nock": "^10.0.0",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^12.0.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
