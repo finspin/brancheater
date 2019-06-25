@@ -31,7 +31,7 @@ describe('brancheater', () => {
 
   describe('closed', () => {
     beforeEach(async () => {
-      const name = 'pull_request'
+      const name = 'pull_request.closed'
       const payload = prClosedWebhookPayload
       await app.receive({ name, payload })
     })
